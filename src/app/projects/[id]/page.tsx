@@ -5,6 +5,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { BLOCKS } from '@contentful/rich-text-types';
 
 const Project = async ({params}:{params: {id: string}}) => {
+    //@ts-ignore
     const {id } = await params; // yes await HAS effect on this thing...
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any

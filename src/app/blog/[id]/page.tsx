@@ -3,14 +3,10 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { BLOCKS } from '@contentful/rich-text-types';
 import GoBack from "@/app/components/GoBack";
 
-interface BlogProps {
-  params: {
-    id: string;
-  };
-}
 
-const Blog = async ({ params }: BlogProps) => {
+const Blog = async ({params}:{params: {id: string}}) => {
 
+    //@ts-ignore
     const { id } = await params;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const post: any = await getBlogPost(id);
