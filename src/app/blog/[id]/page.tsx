@@ -3,8 +3,13 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { BLOCKS } from '@contentful/rich-text-types';
 import GoBack from "@/app/components/GoBack";
 
+type PageProps = {
+  params: {
+    id: string;
+  };
+};
 
-const Blog = async ({params}:{params: {id: string}}) => {
+const Blog = async ({ params }: PageProps) => {
 
     //@ts-ignore
     // eslint-disable-next-line @typescript-eslint/no-explicit-any

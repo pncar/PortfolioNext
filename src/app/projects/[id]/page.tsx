@@ -4,7 +4,13 @@ import GoBack from "@/app/components/GoBack";
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
 
-const Project = async ({params}:{params: {id: string}}) => {
+type PageProps = {
+  params: {
+    id: string;
+  };
+};
+
+const Project = async ({ params }: PageProps) => {
     //@ts-ignore
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
