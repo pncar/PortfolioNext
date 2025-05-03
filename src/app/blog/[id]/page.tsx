@@ -10,10 +10,9 @@ type PageProps = {
 };
 
 const Blog = async ({ params }: PageProps) => {
-
-    //@ts-ignore
+    const { id } = await params;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const post: any = await getBlogPost(params.id);
+    const post: any = await getBlogPost(id);
 
     const options = {
         renderNode: {

@@ -11,10 +11,10 @@ type PageProps = {
 };
 
 const Project = async ({ params }: PageProps) => {
-    //@ts-ignore
+    const { id } = await params;
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const project:any = await getProject(params.id);
+    const project:any = await getProject(id);
 
     if (!project) {
       return notFound();
