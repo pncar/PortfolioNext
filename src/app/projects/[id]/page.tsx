@@ -6,10 +6,9 @@ import { BLOCKS } from '@contentful/rich-text-types';
 
 const Project = async ({params}:{params: {id: string}}) => {
     //@ts-ignore
-    const {id } = await params; // yes await HAS effect on this thing...
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const project:any = await getProject(id);
+    const project:any = await getProject(params.id);
 
     if (!project) {
       return notFound();

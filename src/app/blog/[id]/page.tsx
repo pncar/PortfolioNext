@@ -7,9 +7,8 @@ import GoBack from "@/app/components/GoBack";
 const Blog = async ({params}:{params: {id: string}}) => {
 
     //@ts-ignore
-    const { id } = await params;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const post: any = await getBlogPost(id);
+    const post: any = await getBlogPost(params.id);
 
     const options = {
         renderNode: {
