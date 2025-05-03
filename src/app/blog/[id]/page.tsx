@@ -4,9 +4,9 @@ import { BLOCKS } from '@contentful/rich-text-types';
 import GoBack from "@/app/components/GoBack";
 
 type PageProps = {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 };
 
 const Blog = async ({ params }: PageProps) => {
