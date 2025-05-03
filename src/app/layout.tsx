@@ -35,7 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${archivo.variable} font-archivo antialiased`}>
+      <body className={`${archivo.variable} ${geistMono.variable} ${geistSans.variable} font-archivo antialiased`}>
         <div className={`bg-primary-950 min-h-screen text-primary-100 md:py-16`}>
           <div className="border border-primary-300/30 relative flex bg-primary-900 container m-auto w-full md:w-2/3 h-screen md:h-[80vh] max-h-screen md:max-h-[80vh] md:rounded-lg overflow-hidden">
             <Navbar/>

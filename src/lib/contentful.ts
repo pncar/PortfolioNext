@@ -1,4 +1,4 @@
-import { createClient } from 'contentful';
+import { createClient, Entry } from 'contentful';
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID!,

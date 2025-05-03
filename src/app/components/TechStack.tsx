@@ -4,7 +4,7 @@ SiJquery, SiNodedotjs, SiRedux, SiPhp, SiLaravel, SiMysql, SiPostgresql, SiGit, 
 SiDocker, SiFirebase, SiLinux, SiPrisma, SiKnexdotjs}
 from "react-icons/si";
 import { RiNextjsLine } from "react-icons/ri";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 interface Filter {
     title: string;
@@ -12,6 +12,7 @@ interface Filter {
 }
 interface Stack {
     name: string;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     icon: any;
     filters: string[];
 }
@@ -31,7 +32,7 @@ const TechStack = () => {
         {title: "sql", active: false}
     ]);
     
-    const filteredStack = () => {
+    const filteredStack = (): Stack[] => {
         const f = new Set;
         const activeFilters = filters.filter((filter:Filter)=>{
             return filter.active === true;
@@ -47,7 +48,7 @@ const TechStack = () => {
                 }
             });
         });
-        return Array.from(f);
+        return (Array.from(f) as Stack[]);
     }
 
     const stack = [
@@ -88,8 +89,7 @@ const TechStack = () => {
         setFilters(r);
     }
 
-    const Panel = ({item}: any) => {
-        const Comp = item.icon;
+    const Panel = ({item}:{item: Stack}) => {
         return(
             <div className="papu bg-primary-800 p-4 rounded-md shadow-md border border-t-primary-600 border-x-primary-900 border-b-primary-950 flex items-center justify-center">
                 <div className="flex flex-col text-center justify-center items-center space-y-2">
@@ -106,7 +106,7 @@ const TechStack = () => {
                 {filters.map((filter:Filter,key:number)=><div key={key} onClick={()=>{toggleFilter(filter.title)}} className={`${filter.active ? "opacity-100" : "opacity-30"} transition-all cursor-pointer p-2 px-4 rounded-md bg-primary-800 uppercase text-xs`}>{filter.title}</div>)}
             </div>
             <div className="container w-full mx-auto justify-center grid grid-cols-4 gap-2 cursor-default">
-                {filteredStack().map((item: any,key:number)=><Panel key={key} item={item}/>)}
+                {filteredStack().map((item: Stack,key:number)=><Panel key={key} item={item}/>)}
             </div>
         </div>
     )

@@ -1,5 +1,4 @@
 import { getBlogPost } from '@/lib/contentful';
-import Link from 'next/link';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
 import GoBack from "@/app/components/GoBack";
@@ -7,10 +6,12 @@ import GoBack from "@/app/components/GoBack";
 const Blog = async ({params}:{params: {id: string}}) => {
 
     const { id } = await params;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const post: any = await getBlogPost(id);
 
     const options = {
         renderNode: {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           [BLOCKS.EMBEDDED_ASSET]: (node: any) => {
             const { file, description } = node.data.target.fields;
             const url = file.url.startsWith('//') ? `https:${file.url}` : file.url;

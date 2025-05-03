@@ -1,5 +1,4 @@
 import { getProject } from "@/lib/contentful";
-import { FaGithub, FaLink } from "react-icons/fa";
 import { notFound } from "next/navigation";
 import GoBack from "@/app/components/GoBack";
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
@@ -8,6 +7,7 @@ import { BLOCKS } from '@contentful/rich-text-types';
 const Project = async ({params}:{params: {id: string}}) => {
     const {id } = await params; // yes await HAS effect on this thing...
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const project:any = await getProject(id);
 
     if (!project) {
@@ -15,6 +15,7 @@ const Project = async ({params}:{params: {id: string}}) => {
     }
     const options = {
         renderNode: {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           [BLOCKS.EMBEDDED_ASSET]: (node: any) => {
             const { file, description } = node.data.target.fields;
             const url = file.url.startsWith('//') ? `https:${file.url}` : file.url;
@@ -47,7 +48,9 @@ const Project = async ({params}:{params: {id: string}}) => {
                 <div className="py-6 flex flex-col space-y-2">
                     <div className="rich-text-div">{documentToReactComponents(project.fields.main,options)}</div>
                     <ul className="flex text-[0.7em] gap-2 uppercase text-primary-300 tracking-wider font-semibold">
-                        {project.fields.items?.map((tag:string,key:number)=><li key={key} className="p-1 px-3 rounded-md bg-primary-800">{JSON.stringify(tag)}</li>)}
+                        {
+                        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                        project.fields.items?.map((tag:string,key:number)=><li key={key} className="p-1 px-3 rounded-md bg-primary-800">{JSON.stringify(tag)}</li>)}
                     </ul>
                 </div>
             </div>}
