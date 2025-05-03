@@ -1,6 +1,5 @@
 import { getBlogPosts } from '@/lib/contentful';
 import Link from 'next/link';
-import type { Entry } from 'contentful';
 
 const Blog = async () => {
 
