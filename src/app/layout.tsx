@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Archivo} from "next/font/google";
 import "./globals.css";
+import Navbar from "@/app/components/Navbar";
+import Spinner from "@/app/components/Spinner";
+import { Suspense } from "react";
+import logo from "@/images/logo-neutral-850.svg";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -11,6 +15,13 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+const archivo = Archivo({
+  variable: "--font-archivo",
+  display: 'swap',
+  subsets: ["latin"]
+});
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,10 +35,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${archivo.variable} font-archivo antialiased`}>
+        <div className={`bg-primary-950 min-h-screen text-primary-100 md:py-16`}>
+          <div className="border border-primary-300/30 relative flex bg-primary-900 container m-auto w-full md:w-2/3 h-screen md:h-[80vh] max-h-screen md:max-h-[80vh] md:rounded-lg overflow-hidden">
+            <Navbar/>
+            <div className="relative overflow-y-scroll w-full p-4 md:p-6" style={{
+              backgroundImage: `url(${logo.src})`,
+              backgroundSize: `200px, 200px`,
+              backgroundPosition: `calc(100% - 16px) calc(100% - 16px)`,
+              backgroundRepeat: `no-repeat`
+              }}>
+              <Suspense fallback={<div className="w-full py-32 flex items-center justify-center"><Spinner/></div>}>
+                {children}
+              </Suspense>
+            </div>
+          </div>
+        </div>
       </body>
     </html>
   );
