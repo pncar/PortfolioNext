@@ -1,7 +1,7 @@
 "use client";
 import { SiHtml5, SiCss3, SiJavascript, SiTypescript, SiReact, SiExpress, SiBootstrap, SiTailwindcss, SiSass, 
 SiJquery, SiNodedotjs, SiRedux, SiPhp, SiLaravel, SiMysql, SiPostgresql, SiGit, SiGithub, SiAmazonwebservices, 
-SiDocker, SiFirebase, SiLinux, SiPrisma, SiKnexdotjs}
+SiDocker, SiFirebase, SiLinux, SiPrisma, SiKnexdotjs, SiPhpmyadmin, SiDbeaver, SiWordpress}
 from "react-icons/si";
 import { RiNextjsLine } from "react-icons/ri";
 import { useState } from "react";
@@ -23,7 +23,6 @@ const TechStack = () => {
         {title: "frontend", active: false},
         {title: "backend", active: false},
         {title: "php", active: false},
-        {title: "html", active: false},
         {title: "css", active: false},
         {title: "react", active: false},
         {title: "db", active: false},
@@ -57,7 +56,7 @@ const TechStack = () => {
         {name: "NextJS", icon: <RiNextjsLine/>, filters: ["js","frontend","backend","react"]},
         {name: "Express", icon: <SiExpress/>, filters: ["js","backend"]},
         {name: "React", icon: <SiReact/>, filters: ["js","frontend","react"]},
-        {name: "HTML5", icon: <SiHtml5/>, filters: ["html","frontend"]},
+        {name: "HTML5", icon: <SiHtml5/>, filters: ["frontend"]},
         {name: "CSS3", icon: <SiCss3/>, filters: ["css","frontend"]},
         {name: "Bootstrap", icon: <SiBootstrap/>, filters: ["css","frontend"]},
         {name: "TailwindCSS", icon: <SiTailwindcss/>, filters: ["css","frontend"]},
@@ -75,8 +74,11 @@ const TechStack = () => {
         {name: "Docker", icon: <SiDocker/>, filters: ["containerization"]},
         {name: "Firebase", icon: <SiFirebase/>, filters: ["backend","cloud"]},
         {name: "Linux", icon: <SiLinux/>, filters: ["backend"]},
-        {name: "Prisma", icon: <SiPrisma/>, filters: ["backend","js","sql"]},
-        {name: "Knex", icon: <SiKnexdotjs/>, filters: ["backend","js","sql"]}
+        {name: "Prisma", icon: <SiPrisma/>, filters: ["backend","js","sql","db"]},
+        {name: "Knex", icon: <SiKnexdotjs/>, filters: ["backend","js","sql","db"]},
+        {name: "PHPMyAdmin", icon: <SiPhpmyadmin/>, filters: ["backend","sql","db"]},
+        {name: "DBeaver", icon: <SiDbeaver/>, filters: ["backend","sql","db"]},
+        {name: "Wordpress", icon: <SiWordpress/>, filters: ["php"]}
     ];
 
     const toggleFilter = (title:string) => {

@@ -54,19 +54,45 @@
   margin: 12px 0px 12px 0px;
 }
 .rich-text-div h2{
-  font-size: 1.1em;
+  font-size: 1.6em;
   font-weight: 600;
   margin: 21px 0px 21px 0px;
 }
-.rich-text-div ul{
+.rich-text-div h3{
+  font-size: 1.4em;
+  font-weight: 600;
+  margin: 18px 0px 18px 0px;
+}
+.rich-text-div h4{
+  font-size: 1.2em;
+  font-weight: 600;
+  margin: 18px 0px 18px 0px;
+}
+.rich-text-div ul, .rich-text-div ol{
   margin-left: 16px;
 }
-.rich-text-div li{
+.rich-text-div ol li{
+  list-style-type: decimal;
+}
+.rich-text-div ul li{
   font-size: 0.9em;
   list-style-type: circle;
 }
+.rich-text-div li ul{
+  margin-left: 16px;
+}
+.rich-text-div li ul li{
+  list-style-type: decimal;
+}
 .rich-text-div a{
   color: #3b82f6;
+}
+.rich-text-div code{
+  display: block;
+  padding: 16px;
+  background-color: #0a0a0a;
+  border-radius: 8px;
+  margin: 8px 0px 8px 0px;
 }
 
  /* width */
