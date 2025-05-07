@@ -18,7 +18,7 @@ export const getBlogPosts = async () =>  {
   return entries.items;
 }
 export const getExperience = async () => {
-  const experience = await client.getEntries({ content_type: `experience`});
+  const experience = await client.getEntries({ content_type: `experience`, order: ["-sys.createdAt"] as const});
   return experience.items;
 }
 

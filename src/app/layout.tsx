@@ -37,7 +37,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${archivo.variable} ${geistMono.variable} ${geistSans.variable} font-archivo antialiased`}>
         <div className={`bg-primary-950 min-h-screen text-primary-100 xl:py-16`}>
-          <div className="border border-primary-300/30 relative flex bg-primary-900 xl:container m-auto w-full xl:w-2/3 h-screen xl:h-[80vh] max-h-screen xl:max-h-[80vh] md:rounded-lg overflow-hidden">
+          <div className="border border-primary-300/30 relative flex flex-col md:flex-row bg-primary-900 xl:container m-auto w-full xl:w-2/3 h-screen xl:h-[80vh] max-h-screen xl:max-h-[80vh] md:rounded-lg overflow-hidden">
             <Navbar/>
             <div className="relative overflow-y-scroll w-full p-4 md:p-6" style={{
               backgroundImage: `url(${logo.src})`,
