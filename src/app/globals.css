@@ -87,13 +87,6 @@
 .rich-text-div a{
   color: #3b82f6;
 }
-.rich-text-div code{
-  display: block;
-  padding: 16px;
-  background-color: #0a0a0a;
-  border-radius: 8px;
-  margin: 8px 0px 8px 0px;
-}
 
  /* width */
 ::-webkit-scrollbar {
