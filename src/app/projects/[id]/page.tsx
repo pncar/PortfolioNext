@@ -2,7 +2,7 @@ import { getProject } from "@/lib/contentful";
 import { notFound } from "next/navigation";
 import GoBack from "@/app/components/GoBack";
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { BLOCKS, MARKS, Paragraph } from '@contentful/rich-text-types';
+import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { tomorrow } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
