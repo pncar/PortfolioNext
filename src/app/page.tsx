@@ -1,13 +1,14 @@
 import Link from "next/link";
 import { FaWhatsapp, FaLinkedin, FaGithub } from "react-icons/fa";
 import TechStack from "@/app/components/TechStack";
+import Image from "@/images/blue.png";
 
 export default function Home() {
   
   return (
     <div className="flex flex-col gap-y-2">
       <div className="container m-auto w-full flex items-center justify-center md:py-6">
-        <div className="p-4 bg-brand-600 bg-gradient-to-bl from-cyan-500 via-blue-600 to-cyan-700 rounded-md flex flex-col-reverse md:flex-row items-center text-primary-300 gap-y-4">
+        <div className="p-4 bg-brand-600 bg-gradient-to-bl from-cyan-700 via-blue-500 to-teal-700 rounded-md flex flex-col-reverse md:flex-row items-center text-primary-300 gap-y-4">
           <div className="flex flex-col space-y-2 md:space-y-4 p-2 md:p-8">
             <p className="text-xs uppercase tracking-wider text-brand-950">Hi, Im <span className="font-sans font-semibold">Pablo Nicolás</span></p>
             <h1 className="text-5xl md:text-6xl text-brand-300">Fullstack Web Developer</h1>
@@ -23,7 +24,7 @@ export default function Home() {
             </div>
           </div>
           <div>
-            <img src={`https://amiralirashidi.github.io/assets/images/front-end-developer.png`}/>
+            <img src={Image.src} className="w-64 object-cover"/>
           </div>
         </div>
       </div>
