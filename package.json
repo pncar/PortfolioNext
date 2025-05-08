@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^16.0.1",
+    "@tsparticles/engine": "^3.8.1",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.8.1",
     "@types/react-syntax-highlighter": "^15.5.13",
     "contentful": "^11.5.18",
     "firebase": "^11.6.1",

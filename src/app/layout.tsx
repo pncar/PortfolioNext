@@ -5,6 +5,7 @@ import Navbar from "@/app/components/Navbar";
 import Spinner from "@/app/components/Spinner";
 import { Suspense } from "react";
 import logo from "@/images/logo-neutral-850.svg";
+import CanvasBackground from "@/app/components/CanvasBackground";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,9 +36,12 @@ export default function RootLayout({
 }>){
   return (
     <html lang="en">
-      <body className={`${archivo.variable} ${geistMono.variable} ${geistSans.variable} font-archivo antialiased`}>
+      <body className={`${archivo.variable} ${geistMono.variable} ${geistSans.variable} relative font-archivo antialiased`}>
+        <div className="events-none bg-transparent w-full h-screen absolute hidden md:block">
+            <CanvasBackground/>
+        </div>
         <div className={`bg-primary-950 bg-gradient-to-br from-primary-950 to-primary-800 min-h-screen text-primary-100 xl:py-16`}>
-          <div className="bg-primary-900/30 border border-primary-300/30 relative flex flex-col md:flex-row xl:container m-auto w-full xl:w-2/3 h-screen xl:h-[80vh] max-h-screen xl:max-h-[80vh] md:rounded-lg overflow-hidden">
+          <div className="z-10 bg-primary-900/30 border border-primary-500/20 relative flex flex-col md:flex-row xl:container m-auto w-full xl:w-2/3 h-screen xl:h-[80vh] max-h-screen xl:max-h-[80vh] md:rounded-lg overflow-hidden">
             <Navbar/>
             <div className="relative overflow-y-scroll w-full p-4 md:p-6" style={{
               backgroundImage: `url(${logo.src})`,

@@ -14,17 +14,17 @@ const Blog = async () => {
     return(
         <div className="">
             <h2 className="text-3xl font-semibold">Blog</h2>
-            <div className="py-4 space-y-3">
+            <div className="py-4 gap-4 grid grid-cols-2 md:grid-cols-3">
                 {posts.map((post) => (
-                    <div key={post.sys.id} className="w-full md:w-2/3 flex border border-primary-800 rounded-md shadow-lg bg-gradient-to-r from-primary-900/50 to-primary-800/50 hover:from-primary-900 hover:to-primary-800 transition-all">
-                        <Link href={`/blog/${post.sys.id}`} className="flex-1 p-4 px-6 gap-y-2">
-                            <h2 className="font-semibold text-lg">{post.fields.title}</h2>
-                            <p className="text-primary-400">{printDate(post.sys.createdAt)}</p>
-                        </Link>
-                        <div className="w-auto p-6">
-                            <img src={post.fields.thumb?.fields.file.url || `https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png`} className="w-32 h-32 object-cover rounded-lg"/>
+                    <Link href={`/blog/${post.sys.id}`} key={post.sys.id} className="group relative h-64 overflow-hidden rounded-lg border border-primary-600">
+                        <img src={post.fields.thumb?.fields.file.url || `https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png`} className="transition-all duration-1000 scale-110 group-hover:scale-100 rounded-lg absolute w-full h-full object-cover"/>
+                        <div className="z-10 relative h-full bg-gradient-to-b from-transparent to-primary-950">
+                            <div className="absolute bottom-0 p-3">
+                                <h2>{post.fields.title}</h2>
+                                <p className="text-primary-400">{printDate(post.sys.createdAt)}</p>
+                            </div>
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </div>
         </div>

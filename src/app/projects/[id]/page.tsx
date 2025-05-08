@@ -63,7 +63,7 @@ const Project = async ({ params }: PageProps) => {
         <div className="w-full 2xl:w-3/4 m-auto">
             {project && 
             <div>
-                <div className="h-64 relative overflow-hidden rounded-md border border-primary-700" style={
+                <div className="h-64 relative overflow-hidden rounded-md outline-1 outline-primary-700/30" style={
                     {
                         backgroundImage: `url(${project.fields.thumbnail?.fields.file.url || `https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png`})`,
                         backgroundSize: "cover"
