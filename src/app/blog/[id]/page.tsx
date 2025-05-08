@@ -46,7 +46,7 @@ const Blog = async ({ params }: PageProps) => {
               <img
                 src={url}
                 alt={description || 'Embedded image'}
-                className="my-4 rounded-md"
+                className="my-4 rounded-md w-full"
               />
             );
           },
@@ -54,14 +54,16 @@ const Blog = async ({ params }: PageProps) => {
     };
 
     return(
+      <div>
         <div className="py-6 px-2 xl:px-0 xl:w-2/3 m-auto">
-            <GoBack/>
+          <GoBack/>
             <div className="py-4 space-y-6 text-primary-300 leading-relaxed text-justify text-wrap">
               <div className="rich-text-div">
                 {documentToReactComponents(post.fields.main,options)}
               </div>
             </div>
         </div>
+      </div>
     )
 }
 

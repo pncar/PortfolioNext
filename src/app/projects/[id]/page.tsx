@@ -60,7 +60,7 @@ const Project = async ({ params }: PageProps) => {
 
 
     return(
-        <div className="">
+        <div className="w-full 2xl:w-3/4 m-auto">
             {project && 
             <div>
                 <div className="h-64 relative overflow-hidden rounded-md border border-primary-700" style={

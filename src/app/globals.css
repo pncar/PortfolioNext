@@ -64,11 +64,13 @@
   font-size: 1.6em;
   font-weight: 600;
   margin: 21px 0px 21px 0px;
+  text-align: left;
 }
 .rich-text-div h3{
   font-size: 1.4em;
   font-weight: 600;
   margin: 18px 0px 18px 0px;
+  text-align: left;
 }
 .rich-text-div h4{
   font-size: 1.2em;
@@ -82,7 +84,6 @@
   list-style-type: decimal;
 }
 .rich-text-div ul li{
-  font-size: 0.9em;
   list-style-type: circle;
 }
 .rich-text-div li ul{
