@@ -13,8 +13,7 @@ const CanvasBackground = () => {
         setSneed([e.clientX +1,e.clientY +1]);
     }
 
-    useEffect(()=>{
-        if(kanvas && kanvas.current){
+    const canvasEffect = () => {
         const c :any = kanvas.current;
         c.width = window.innerWidth;
         c.height = window.innerHeight;
@@ -38,7 +37,11 @@ const CanvasBackground = () => {
         ctx.beginPath();
         ctx.arc(sneed[0], sneed[1], smallG, 0, 2 * Math.PI);
         ctx.fill();
-    
+    }
+
+    useEffect(()=>{
+        if(kanvas && kanvas.current){
+        canvasEffect();
         }
       },[sneed]);
 

@@ -34,6 +34,11 @@
   --font-mono: "Geist Mono", "sans-serif";
 }
 
+::selection {
+  background: #fafafa;
+  color: #171717;
+}
+
 .no-scroll::-webkit-scrollbar {
   display: none;
 }

@@ -9,7 +9,7 @@ const Projects = async () => {
 
     return(
         <div className="container w-full m-auto flex flex-col gap-2">
-                <h1 className="text-brand-500 text-3xl font-semibold">Projects</h1>
+                <h1 className="text-4xl">Projects</h1>
                 <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 p-2">
                 {projects.map((p) => (
                     <li key={p.sys.id} className="flex flex-col group relative h-64 rounded-md overflow-hidden border border-primary-600/50">
@@ -20,8 +20,8 @@ const Projects = async () => {
                             <span className="text-xs uppercase text-brand-500 tracking-wider">{p.fields.type || "uncategorized"}</span>
                             <Link href={`/projects/${p.sys.id}`} className="block">{p.fields.title}</Link>
                             <ul className="flex gap-1 text-xs">
-                                {p.fields.repository && <li className="bg-primary-600 p-1 px-3 rounded-md"><Link href={p.fields.repository} className="flex items-center gap-1"><FaGithub/><span>Repo</span></Link></li>}
-                                {p.fields.live && <li className="bg-primary-600 p-1 px-3 rounded-md"><Link href={p.fields.live} className="flex items-center gap-1"><FaLink/><span>Live</span></Link></li>}
+                                {p.fields.repository && <li className="bg-primary-600 hover:bg-primary-500 transition-all p-1 px-3 rounded-md"><Link href={p.fields.repository} className="flex items-center gap-1"><FaGithub/><span>Repo</span></Link></li>}
+                                {p.fields.live && <li className="bg-primary-600 hover:bg-primary-500 transition-all p-1 px-3 rounded-md"><Link href={p.fields.live} className="flex items-center gap-1"><FaLink/><span>Live</span></Link></li>}
                             </ul>
                         </div>
                     </li>

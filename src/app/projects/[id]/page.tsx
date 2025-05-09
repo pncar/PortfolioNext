@@ -70,7 +70,7 @@ const Project = async ({ params }: PageProps) => {
                     }}>
                     <div className="absolute bottom-0 p-8 w-full bg-gradient-to-b from-transparent via-primary-900/70 to-primary-900 h-full flex flex-col justify-end">
                         <p className="uppercase text-xs">{project.fields.type}</p>
-                        <h3 className="text-3xl font-semibold text-brand-500">{project.fields.title}</h3>
+                        <h3 className="text-3xl font-semibold text-brand-500 text-shadow-sm">{project.fields.title}</h3>
                     </div>
                 </div>
                 <div className="py-6 flex flex-col space-y-2">

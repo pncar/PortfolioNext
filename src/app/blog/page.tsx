@@ -13,11 +13,11 @@ const Blog = async () => {
 
     return(
         <div className="">
-            <h2 className="text-3xl font-semibold">Blog</h2>
-            <div className="py-4 gap-4 grid grid-cols-2 md:grid-cols-3">
+            <h1 className="text-4xl">Blog</h1>
+            <div className="py-4 gap-4 grid md:grid-cols-2 lg:grid-cols-3">
                 {posts.map((post) => (
                     <Link href={`/blog/${post.sys.id}`} key={post.sys.id} className="group relative h-64 overflow-hidden rounded-lg border border-primary-600">
-                        <img src={post.fields.thumb?.fields.file.url || `https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png`} className="transition-all duration-1000 scale-110 group-hover:scale-100 rounded-lg absolute w-full h-full object-cover"/>
+                        <img src={post.fields.thumb?.fields.file.url || `https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png`} className="transition-all scale-110 group-hover:scale-100 rounded-lg absolute w-full h-full object-cover"/>
                         <div className="z-10 relative h-full bg-gradient-to-b from-transparent to-primary-950">
                             <div className="absolute bottom-0 p-3">
                                 <h2>{post.fields.title}</h2>

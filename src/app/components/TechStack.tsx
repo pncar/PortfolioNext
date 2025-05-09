@@ -93,7 +93,7 @@ const TechStack = () => {
 
     const Panel = ({item}:{item: Stack}) => {
         return(
-            <div className="papu bg-gradient-to-r transition-all duration-1000 from-primary-700/10 hover:from-primary-700/30 via-primary-950/30 to-primary-700/10 hover:to-primary-700/30 p-4 rounded-md shadow-md border border-t-primary-600/50 border-x-primary-800/50 border-b-primary-950/50 flex items-center justify-center">
+            <div className="bg-primary-900 md:bg-transparent bg-gradient-to-r transition-all duration-1000 from-primary-900/10 hover:from-primary-700/30 via-primary-950/30 to-primary-900/10 hover:to-primary-700/30 p-4 rounded-md shadow-md border border-t-primary-600/50 border-x-primary-800/50 border-b-primary-950/50 flex items-center justify-center">
                 <div className="flex flex-col text-center justify-center items-center space-y-2">
                     {item.icon && <div className="text-brand-500 text-3xl">{item.icon}</div>}
                     <p className="text-xs">{item.name}</p>
@@ -103,7 +103,7 @@ const TechStack = () => {
     }
 
     return(
-        <div className="flex flex-col min-h-screen gap-y-4">
+        <div className="flex flex-col gap-y-4">
             <div className="flex flex-wrap gap-2">
                 {filters.map((filter:Filter,key:number)=><div key={key} onClick={()=>{toggleFilter(filter.title)}} className={`${filter.active ? "opacity-100" : "opacity-30"} transition-all cursor-pointer p-2 px-4 rounded-md bg-primary-950 uppercase text-xs`}>{filter.title}</div>)}
             </div>
