@@ -14,7 +14,7 @@ const client = createClient({
 });
 
 export const getBlogPosts = async () =>  {
-  const entries = await client.getEntries({ content_type: 'blgoPost' });
+  const entries = await client.getEntries({ content_type: 'blgoPost' , order: ["-sys.createdAt"] as const});
   return entries.items;
 }
 export const getExperience = async () => {

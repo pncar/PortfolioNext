@@ -21,9 +21,13 @@ const CanvasBackground = () => {
     
         const smallG: number = 1;
         const largeG: number = 760;
+
+        const color1 = "#334155";
+        const color2 = "#5b21b6";
+        const color3 = "#0a0a0a";
     
         let grd: any = ctx.createRadialGradient(sneed[0], sneed[1], 1, sneed[0], sneed[1], largeG);
-        grd.addColorStop(0, "#334155");
+        grd.addColorStop(0, color1);
         grd.addColorStop(1, "transparent");
         ctx.fillStyle = grd;
         ctx.beginPath();
@@ -31,12 +35,14 @@ const CanvasBackground = () => {
         ctx.fill();
     
         grd = ctx.createRadialGradient(sneed[0], sneed[1], 1, sneed[0], sneed[1], smallG);
-        grd.addColorStop(0, "#5b21b6");
+        grd.addColorStop(0, color2);
         grd.addColorStop(1, "transparent");
         ctx.fillStyle = grd;
         ctx.beginPath();
         ctx.arc(sneed[0], sneed[1], smallG, 0, 2 * Math.PI);
         ctx.fill();
+
+
     }
 
     useEffect(()=>{

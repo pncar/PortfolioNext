@@ -5,6 +5,7 @@ import Navbar from "@/app/components/Navbar";
 import Spinner from "@/app/components/Spinner";
 import { Suspense } from "react";
 import logo from "@/images/logo-neutral-850.svg";
+import logo100 from "@/images/logo-zinc-100.svg";
 import CanvasBackground from "@/app/components/CanvasBackground";
 
 const geistSans = Geist({
@@ -41,11 +42,12 @@ export default function RootLayout({
             <CanvasBackground/>
         </div>
         <div className={`bg-transparent md:bg-primary-950 bg-gradient-to-br from-primary-950 to-primary-800 min-h-screen text-primary-100 xl:py-16`}>
-          <div className="z-10 bg-primary-900/30 border border-primary-500/20 relative flex flex-col xl:container m-auto w-full xl:w-2/3 h-screen xl:h-[80vh] max-h-screen xl:max-h-[80vh] md:rounded-lg overflow-hidden">
-            <div className="w-full p-4 md:px-8 border-b border-primary-600/30">
-              <p className="font-semibold text-xs">Pablo Nicolás</p>
+          <div className="z-10 bg-primary-900/30 border border-primary-500/20 relative flex flex-col xl:container m-auto w-full 2xl:w-2/3 h-screen xl:h-[80vh] max-h-screen xl:max-h-[80vh] md:rounded-lg overflow-hidden">
+            <div className="w-full p-4 md:px-8 border-b border-primary-600/30 hidden md:flex items-center gap-x-2">
+              <img src={logo100.src} className="w-5 h-5"/>
+              <p className="font-semibold text-xs">Pablo Nicolás | <span className="font-light">Fullstack Web Developer</span></p>
             </div>
-            <div className="w-full relative flex flex-col md:flex-row overflow-y-scroll">
+            <div className="w-full relative flex flex-col md:flex-row overflow-hidden">
               <Navbar/>
               <div className="relative overflow-y-scroll w-full p-4 md:p-6" style={{
                 backgroundImage: `url(${logo.src})`,
