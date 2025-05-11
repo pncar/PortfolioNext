@@ -93,7 +93,7 @@ const TechStack = () => {
 
     const Panel = ({item}:{item: Stack}) => {
         return(
-            <div className="bg-primary-900 md:bg-transparent bg-gradient-to-r transition-all duration-1000 from-primary-900/10 hover:from-primary-700/30 via-primary-950/30 to-primary-900/10 hover:to-primary-700/30 p-4 rounded-md shadow-md border border-t-primary-600/50 border-x-primary-800/50 border-b-primary-950/50 flex items-center justify-center">
+            <div className="bg-opacity-50 hover:bg-opacity-100 bg-primary-900 transition-all duration-300 p-4 rounded-md shadow-md border border-t-primary-600/50 border-x-primary-800/50 border-b-primary-950/50 flex items-center justify-center hover:border-blue-600">
                 <div className="flex flex-col text-center justify-center items-center space-y-2">
                     {item.icon && <div className="text-brand-500 text-3xl">{item.icon}</div>}
                     <p className="text-xs">{item.name}</p>

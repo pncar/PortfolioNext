@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Archivo} from "next/font/google";
 import "./globals.css";
 import Navbar from "@/app/components/Navbar";
-import Spinner from "@/app/components/Spinner";
-import { Suspense } from "react";
 import logo from "@/images/logo-neutral-850.svg";
 import logo100 from "@/images/logo-zinc-100.svg";
 import CanvasBackground from "@/app/components/CanvasBackground";
@@ -55,9 +53,9 @@ export default function RootLayout({
                 backgroundPosition: `calc(100% - 16px) calc(100% - 16px)`,
                 backgroundRepeat: `no-repeat`
                 }}>
-                <Suspense fallback={<div className="w-full py-32 flex items-center justify-center"><Spinner/></div>}>
+                <>
                   {children}
-                </Suspense>
+                </>
               </div>
             </div>
           </div>
