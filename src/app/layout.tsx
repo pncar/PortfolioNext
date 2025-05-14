@@ -5,7 +5,6 @@ import Navbar from "@/app/components/Navbar";
 import logo from "@/images/logo-neutral-850.svg";
 import logo100 from "@/images/logo-zinc-100.svg";
 import CanvasBackground from "@/app/components/CanvasBackground";
-import LoadBar from "@/app/components/LoadBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
