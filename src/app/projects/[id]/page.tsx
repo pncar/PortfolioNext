@@ -4,7 +4,7 @@ import GoBack from "@/app/components/GoBack";
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { tomorrow } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
 type PageProps = {
   params: Promise<{
@@ -34,7 +34,7 @@ const Project = async ({ params }: PageProps) => {
             }
 
            return (
-            <SyntaxHighlighter language={language} style={tomorrow}>
+            <SyntaxHighlighter language={language} style={vscDarkPlus}>
               {code}
             </SyntaxHighlighter>
           )},

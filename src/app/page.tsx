@@ -13,14 +13,15 @@ export default function Home() {
             <p className="text-xs uppercase tracking-wider">Hi, Im <span className="font-sans font-semibold">Pablo Nicolás</span></p>
             <h1 className="text-5xl md:text-6xl">Fullstack Web Developer</h1>
             <p>Developer blending frontend craft with backend logic to build performant, data-driven web applications that integrate external APIs and services. 🦜</p>
-            <div className="flex space-x-2 font-semibold text-primary-300">
-              <Link href="/projects" className="p-2 px-4 rounded-md bg-brand-950/80 hover:bg-brand-800/100 text-sm cursor-pointer  transition-all">View Projects</Link>
-              <Link href="/contact" className="p-2 px-4 rounded-md bg-brand-950/80 hover:bg-brand-800/100 text-sm cursor-pointer transition-all">Contact Me</Link>
-            </div>
-            <div className="flex space-x-4 text-primary-900">
-              <Link href="/"><FaWhatsapp className="text-2xl"/></Link>
-              <Link href="/"><FaLinkedin className="text-2xl"/></Link>
-              <Link href="/"><FaGithub className="text-2xl"/></Link>
+            <div className="flex items-center gap-x-3">
+              <div className="flex gap-x-2 font-semibold text-primary-300">
+                <Link href="/projects" className="p-2 px-4 rounded-md bg-brand-950 hover:bg-brand-800 text-sm cursor-pointer  transition-all">View Projects</Link>
+              </div>
+              <div className="flex gap-x-2 text-primary-900">
+                <Link href="/"><FaWhatsapp className="text-2xl"/></Link>
+                <Link href="/"><FaLinkedin className="text-2xl"/></Link>
+                <Link href="/"><FaGithub className="text-2xl"/></Link>
+              </div>
             </div>
           </div>
           <div className="w-80">
