@@ -5,6 +5,7 @@ import Navbar from "@/app/components/Navbar";
 import logo from "@/images/logo-neutral-850.svg";
 import logo100 from "@/images/logo-zinc-100.svg";
 import CanvasBackground from "@/app/components/CanvasBackground";
+import LoadBar from "@/app/components/LoadBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,10 +37,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${archivo.variable} ${geistMono.variable} ${geistSans.variable} relative font-archivo antialiased cursor-default`}>
+        { false && //I'll disable it for now because I found it annoying
         <div className="pointer-events-none bg-transparent w-full h-screen absolute hidden md:block">
             <CanvasBackground/>
         </div>
-        <div className={`bg-transparent md:bg-primary-950 bg-gradient-to-br from-primary-950 to-primary-800 min-h-screen text-primary-100 xl:py-16`}>
+        }
+        <div className={`bg-transparent md:bg-primary-950 bg-gradient-to-br from-primary-950 to-primary-900 min-h-screen text-primary-100 xl:py-16`}>
           <div className="z-10 bg-primary-900/30 border border-primary-500/20 relative flex flex-col xl:container m-auto w-full 2xl:w-2/3 h-screen xl:h-[80vh] max-h-screen xl:max-h-[80vh] md:rounded-lg overflow-hidden">
             <div className="w-full p-4 md:px-8 border-b border-primary-600/30 hidden md:flex items-center gap-x-2">
               <img src={logo100.src} className="w-5 h-5"/>
