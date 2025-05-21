@@ -15,7 +15,7 @@ type PageProps = {
 
 export async function generateMetadata(
   { params }: { params: { id: string } }
-): Promise<Metadata> {
+) {
   const post = await getBlogPost(params.id)
 
   return {
