@@ -14,13 +14,13 @@ type PageProps = {
 };
 
 export async function generateMetadata(
-  { params }: PageProps
+  { params }: { params: { id: string } }
 ): Promise<Metadata> {
   const post = await getBlogPost(params.id)
 
   return {
     title: `${post.fields.title} | Pablo Nicolás, Fullstack Developer`,
-  }
+  };
 }
 
 const Blog = async ({ params }: PageProps) => {

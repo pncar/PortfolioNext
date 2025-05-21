@@ -8,15 +8,16 @@ import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import { Metadata } from "next";
 
 type PageProps = {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 };
 
 export async function generateMetadata(
-  { params }: PageProps
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  { params }: { params: { slug: string } }
 ): Promise<Metadata> {
-  const post = await getProject(params.id)
+  const post = await getProject(params.slug)
 
   return {
     title: `${post.fields.title} | Pablo Nicolás, Fullstack Developer`,
@@ -24,7 +25,7 @@ export async function generateMetadata(
 }
 
 const Project = async ({ params }: PageProps) => {
-    const { id } = params;
+    const { id } = await params;
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const project:any = await getProject(id);
