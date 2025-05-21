@@ -4,7 +4,6 @@ import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 import GoBack from "@/app/components/GoBack";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
-import { Metadata } from 'next';
 
 
 type PageProps = {
