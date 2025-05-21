@@ -4,26 +4,28 @@ import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 import GoBack from "@/app/components/GoBack";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import { Metadata } from 'next';
 
 
 type PageProps = {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 };
 
 export async function generateMetadata(
-  { params }: { params: { id: string } }
-) {
-  const post = await getBlogPost(params.id)
+  { params }: PageProps
+): Promise<Metadata> {
+  const { id } = await params;
+  const post = await getBlogPost(id)
 
   return {
     title: `${post.fields.title} | Pablo Nicolás, Fullstack Developer`,
-  };
+  }
 }
 
 const Blog = async ({ params }: PageProps) => {
-    const { id } = params;
+    const { id } = await params;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const post: any = await getBlogPost(id);
 
