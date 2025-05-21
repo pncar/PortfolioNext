@@ -8,13 +8,13 @@ import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import { Metadata } from "next";
 
 type PageProps = {
-  params: Promise<{
+  params: {
     id: string;
-  }>;
+  };
 };
 
 export async function generateMetadata(
-  { params }: { params: { id: string } }
+  { params }: PageProps
 ): Promise<Metadata> {
   const post = await getProject(params.id)
 
@@ -24,7 +24,7 @@ export async function generateMetadata(
 }
 
 const Project = async ({ params }: PageProps) => {
-    const { id } = await params;
+    const { id } = params;
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const project:any = await getProject(id);
