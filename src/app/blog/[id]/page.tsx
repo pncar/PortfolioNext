@@ -14,6 +14,7 @@ type PageProps = {
 };
 
 export async function generateMetadata(
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   { params }: { params: { slug: string } }
 ): Promise<Metadata> {
   const post = await getBlogPost(params.slug)
