@@ -14,10 +14,9 @@ type PageProps = {
 };
 
 export async function generateMetadata(
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  { params }: { params: { slug: string } }
+  { params }: { params: { id: string } }
 ): Promise<Metadata> {
-  const post = await getBlogPost(params.slug)
+  const post = await getBlogPost(params.id)
 
   return {
     title: `${post.fields.title} | Pablo Nicolás, Fullstack Developer`,
