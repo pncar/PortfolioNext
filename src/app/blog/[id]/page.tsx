@@ -4,12 +4,24 @@ import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 import GoBack from "@/app/components/GoBack";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import { Metadata } from 'next';
+
 
 type PageProps = {
   params: Promise<{
     id: string;
   }>;
 };
+
+export async function generateMetadata(
+  { params }: { params: { slug: string } }
+): Promise<Metadata> {
+  const post = await getBlogPost(params.slug)
+
+  return {
+    title: `${post.fields.title} | Pablo Nicolás, Fullstack Developer`,
+  }
+}
 
 const Blog = async ({ params }: PageProps) => {
     const { id } = await params;
@@ -52,11 +64,15 @@ const Blog = async ({ params }: PageProps) => {
           },
         },
     };
+    
 
     return(
       <div>
         <div className="py-6 px-2 xl:px-0 xl:w-2/3 m-auto">
-          <GoBack/>
+            <div className="flex items-center gap-x-4">
+              <GoBack/>
+              <h2 className="text-brand-500">{post.fields.title}</h2>
+            </div>
             <div className="py-4 space-y-6 text-primary-300 leading-relaxed text-justify text-wrap">
               <div className="rich-text-div">
                 {documentToReactComponents(post.fields.main,options)}
