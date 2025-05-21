@@ -1,3 +1,4 @@
+export const revalidate = 10;
 import { getBlogPosts } from '@/lib/contentful';
 import Link from 'next/link';
 
