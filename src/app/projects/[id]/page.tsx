@@ -5,12 +5,23 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import { Metadata } from "next";
 
 type PageProps = {
   params: Promise<{
     id: string;
   }>;
 };
+
+export async function generateMetadata(
+  { params }: { params: { slug: string } }
+): Promise<Metadata> {
+  const post = await getProject(params.slug)
+
+  return {
+    title: `${post.fields.title} | Pablo Nicolás, Fullstack Developer`,
+  }
+}
 
 const Project = async ({ params }: PageProps) => {
     const { id } = await params;
