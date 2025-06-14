@@ -12,7 +12,7 @@ const Projects = async () => {
                 <h1 className="text-4xl">Projects</h1>
                 <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 p-2">
                 {projects.map((p) => (
-                    <li key={p.sys.id} className="flex flex-col group relative h-64 rounded-md overflow-hidden border border-primary-600/50">
+                    <li key={p.sys.id} className="text-primary-100 flex flex-col group relative h-64 rounded-md overflow-hidden border border-primary-600/50">
                         <Link href={`/projects/${p.sys.id}`} className="w-full overflow-hidden absolute h-full">
                             <img src={p.fields.thumbnail?.fields.file.url || `https://i0.wp.com/port2flavors.com/wp-content/uploads/2022/07/placeholder-614.png`} className="transition-all scale-125 group-hover:scale-100 w-full h-full object-cover"/>
                         </Link>

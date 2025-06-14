@@ -14,9 +14,7 @@
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
-.rich-text-div{
-  color: #d4d4d4;
-}
+
 .rich-text-div hr{
   margin: 32px 0px 32px 0px;
   height: 1px;
@@ -70,7 +68,7 @@
 }
 
 .shadow-glow{
-  box-shadow: 0px 0px 5px lightblue;
+  box-shadow: 0px 0px 16px lightblue;
 }
 
  /* width */
@@ -85,11 +83,11 @@
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #262626;
+  background: #737373;
   border-radius: 0px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #404040; 
+  background: #a3a3a3; 
 }

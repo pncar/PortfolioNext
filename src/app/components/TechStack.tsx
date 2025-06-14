@@ -93,7 +93,7 @@ const TechStack = () => {
 
     const Panel = ({item}:{item: Stack}) => {
         return(
-            <div className="bg-opacity-50 hover:bg-opacity-100 bg-primary-900 transition-all duration-300 p-4 rounded-md shadow-md border border-t-primary-600/50 border-x-primary-800/50 border-b-primary-950/50 flex items-center justify-center hover:border-blue-600">
+            <div className="bg-opacity-50 hover:bg-opacity-100 bg-white dark:bg-primary-900 transition-all duration-300 p-4 rounded-md shadow-md border border-t-primary-50/50 dark:border-t-primary-600/50 border-x-primary-200 dark:border-x-primary-800/50 boder-b-primary-300 dark:border-b-primary-950/50 flex items-center justify-center hover:border-blue-600">
                 <div className="flex flex-col text-center justify-center items-center space-y-2">
                     {item.icon && <div className="text-brand-500 text-3xl">{item.icon}</div>}
                     <p className="text-xs">{item.name}</p>
@@ -105,7 +105,7 @@ const TechStack = () => {
     return(
         <div className="flex flex-col gap-y-4">
             <div className="flex flex-wrap gap-2">
-                {filters.map((filter:Filter,key:number)=><div key={key} onClick={()=>{toggleFilter(filter.title)}} className={`${filter.active ? "opacity-100" : "opacity-30"} transition-all cursor-pointer p-2 px-4 rounded-md bg-primary-950 uppercase text-xs`}>{filter.title}</div>)}
+                {filters.map((filter:Filter,key:number)=><div key={key} onClick={()=>{toggleFilter(filter.title)}} className={`${filter.active ? "opacity-100" : "opacity-50 dark:opacity-30"} text-primary-950 dark:text-primary-300 transition-all cursor-pointer p-2 px-4 rounded-md bg-primary-300 dark:bg-primary-950 uppercase text-xs`}>{filter.title}</div>)}
             </div>
             <div className="container w-full mx-auto justify-center grid grid-cols-3 md:grid-cols-4 2xl:grid-cols-6 gap-2 cursor-default">
                 {filteredStack().map((item: Stack,key:number)=><Panel key={key} item={item}/>)}

@@ -75,7 +75,7 @@ const Blog = async ({ params }: PageProps) => {
               <h2 className="text-brand-500">{post.fields.title}</h2>
             </div>
             <div className="py-4 space-y-6 text-primary-300 leading-relaxed text-justify text-wrap">
-              <div className="rich-text-div">
+              <div className="rich-text-div text-primary-700 dark:text-primary-300">
                 {documentToReactComponents(post.fields.main,options)}
               </div>
             </div>
