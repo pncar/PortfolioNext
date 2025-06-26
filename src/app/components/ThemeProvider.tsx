@@ -13,7 +13,7 @@ export const ThemeWrapper = ({ children }: { children: React.ReactNode}) => {
     }
     return(
         <ThemeContext.Provider value={{dark,toggleDark}}>
-            <div className={dark ? `` : `dark`}>{children}</div>
+            <div className={dark ? `dark` : ``}>{children}</div>
         </ThemeContext.Provider>
     )
 }

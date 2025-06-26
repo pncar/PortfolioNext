@@ -45,7 +45,7 @@ export default function RootLayout({
           </div>
           }
           <div className={`bg-transparent md:bg-primary-950 bg-gradient-to-br from-primary-200 dark:from-primary-950 to-primary-50 dark:to-primary-900 min-h-screen dark:text-primary-100 xl:py-16`}>
-            <div className="z-10 bg-primary-50 dark:bg-primary-900/30 border border-primary-500/20 relative flex flex-col xl:container m-auto w-full 2xl:w-2/3 h-screen xl:h-[80vh] max-h-screen xl:max-h-[80vh] md:rounded-lg overflow-hidden">
+            <div className="z-10 bg-primary-50/30 dark:bg-primary-900/30 border border-primary-500/20 relative flex flex-col xl:container m-auto w-full 2xl:w-2/3 h-screen xl:h-[80vh] max-h-screen xl:max-h-[80vh] md:rounded-lg overflow-hidden">
               <div className="bg-primary-100 dark:bg-primary-900 w-full p-4 md:px-8 border-b border-primary-600/30 hidden md:flex items-center gap-x-2">
                 <div className="flex items-center gap-x-2 w-full text-primary-950 dark:text-primary-50">
                   <img src={logo100.src} className="w-5 h-5 invert dark:invert-0"/>
