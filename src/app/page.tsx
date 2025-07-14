@@ -10,7 +10,7 @@ export default function Home() {
       <div className="container m-auto w-full flex items-center justify-center md:py-6">
         <div className="p-4 bg-brand-600 bg-gradient-to-bl from-cyan-900 via-blue-500 to-teal-750 rounded-md flex flex-col-reverse md:flex-row items-center text-primary-300 gap-y-4">
           <div className="flex flex-col w-full space-y-2 md:space-y-4 p-2 md:p-8 text-brand-950">
-            <p className="text-xs uppercase tracking-wider">Hi, Im <span className="font-sans font-semibold">Pablo Nicolás</span></p>
+            <p className="text-xs uppercase tracking-wider">Hello, Im <span className="font-sans font-semibold">Pablo Nicolás</span></p>
             <h1 className="text-5xl md:text-6xl">Fullstack Web Developer</h1>
             <p>Developer blending frontend craft with backend logic to build performant, data-driven web applications that integrate external APIs and services. 🦜</p>
             <div className="flex items-center gap-x-3">
