@@ -12,7 +12,7 @@ export default function Home() {
           <div className="flex flex-col w-full space-y-2 md:space-y-4 p-2 md:p-8 text-brand-950">
             <p className="text-xs uppercase tracking-wider">Hello, Im <span className="font-sans font-semibold">Pablo Nicolás</span></p>
             <h1 className="text-5xl md:text-6xl">Fullstack Web Developer</h1>
-            <p>Developer blending frontend craft with backend logic to build performant, data-driven web applications that integrate external APIs and services. 🦜</p>
+            <p>Web developer with 5 years of experience building and maintaining frontend and full-stack applications. Most of my stack involves using tools like Next.js, React, Express, PHP, and WordPress. Experienced with relational databases (MySQL), modern CSS frameworks (Tailwind), and version control (Git). Experience with more older platforms like Wordpress and able to work with more modern headless CMSs when needed. Able to solve practical problems, debugging issues, and keeping code maintainable, also to pick up new tools quickly and adapt to different project needs. 🦜</p>
             <div className="flex items-center gap-x-3">
               <div className="flex gap-x-2 font-semibold text-primary-300">
                 <Link href="/projects" className="p-2 px-4 rounded-md bg-brand-950 hover:bg-brand-800 text-sm cursor-pointer  transition-all">View Projects</Link>
