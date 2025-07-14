@@ -17,7 +17,7 @@ const Experience = async () => {
           <h3 className="font-semibold text-brand-400 gap-x-1 flex items-center text-lg"><BiChevronRight/>{exp.fields.position}</h3>
           <p className="font-semibold text-sm">{exp.fields.company}</p>
           <div className="gap-y-2 divide-y divide-primary-700/50">
-            <div className="rich-text-div">
+            <div className="rich-text-div text-primary-800 dark:text-primary-400">
               {documentToReactComponents(exp.fields.description)}
             </div>
           </div>
