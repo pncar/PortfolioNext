@@ -1,4 +1,5 @@
 
+export const revalidate = 10;
 import GoBack from "@/app/components/GoBack";
 import { getExperience } from "@/lib/contentful";
 import { BiChevronRight } from "react-icons/bi";
